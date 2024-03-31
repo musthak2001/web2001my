@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" placeholder="  enter username here" class="border-2 border-indigo-600 rounded-lg" >&nbsp;
+    <label for="fname" style="visibility: hidden;" id="msg">Error Input !!</label><br>
+    <button type="button" class="bg-green-600 rounded-lg px-2 py-2 m-16" onclick="check()">Click Me!</button>
+</body>
+
+<script>
+    function check()
+    {
+        var inp1=document.getElementById( "fname").value;
+        var pattern=/^[A-Za-z0-9_]{8,20}$/;
+        if(inp1.match(pattern)){
+            alert("input is valid")
+        }
+        else{
+            document.getElementById("msg").style.visibility="visible"
+            document.getElementById("msg").style.color="red"
+        }
+    }
+</script>
+</html>

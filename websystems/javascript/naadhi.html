@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <label for="">USERNAME :</label> 
+   <input type="text" name="" id="uname" placeholder="username">
+   <label for="" id="error" style="visibility: hidden;">!invalid user name</label><br>
+   <br>
+   <button type="button" onclick="check()">submit</button>
+</body>
+</html>
+<script>
+    function check(){
+        var input=document.getElementById('uname').value;
+
+        var pattern=/^abc$/;
+
+        if(input.match(pattern)){
+            alert("correct user name");
+        }
+        else{
+            document.getElementById('error').style.visibility="visible";
+            document.getElementById('error').style.color="red";
+            document.getElementById('uname').style.border="2px solid red";
+        }
+    }
+
+</script>

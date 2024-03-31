@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="email">EMAIL :</label> 
+   <input type="text" name="email" id="email" placeholder="email">
+   <label for="error" id="error" style="visibility: hidden; color: red;">Invalid e-mail</label><br>
+   <br>
+   <button type="button" onclick="check()">Submit</button>
+
+   <script>
+    function check() {
+        var input = document.getElementById('email').value;
+
+        var pattern = /^[A-Za-z0-9_-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+
+        if (input.match(pattern)) {
+            alert("Correct e-mail");
+        } else {
+            document.getElementById('error').style.visibility = "visible";
+            document.getElementById('email').style.border = "2px solid red";
+        }
+    }
+   </script>
+</body>
+</html>

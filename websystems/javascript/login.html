@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="bg-green-600 h-screen flex justify-center items-center">
+        <div class="bg-blue-200 px-32 pt-8  pb-8 rounded-lg">
+            <h1 class="text-xl text-red-500 uppercase pl-16">login</h1><br>
+            
+            <div class="w-32 h-32 ml-8 border-2 border-lime-600 rounded-full">
+
+                <img src="user.png" alt="" class="w-full h-full object-cover rounded-full">
+                
+            </div>
+            <br>
+            <input type="text" placeholder="USERNAME" class="rounded-md border-2 py-2 px-2 border-lime-600" id="uname"><br><br>
+            <input type="password" name="password" id="pswd" placeholder="password" class="uppercase rounded-md border-2 py-2 px-2 border-lime-600" >
+            <br><br>
+            <div class="flex justify-center">
+                <button type="submit" class="bg-green-600 px-2 py-2 rounded-lg text-white font-bold uppercase" onclick="check()">button</button>
+            </div>
+            <br>
+            <div>
+                <div class="flex justify-center">
+                    <div class="list-none flex gap-2">
+                        <li class="list-none">
+                            <li><i class="fab fa-facebook" aria-hidden="true"></i></i></li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </li>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+
+<script>
+    function check(){
+        var inp = document.getElementById("uname").value;
+        var pattern = /^[A-Za-z0-9_]{8,20}$/;
+
+        var inp2 = document.getElementById("pswd").value;
+        var pattern2 = /^[A-Za-z0-9]{6,10}$/;
+
+        if (inp.match(pattern)) {
+            if (inp2.match(pattern2)) {
+                alert("Logged In.............!");
+            } else {
+                alert("Invalid password...........!");
+            }
+        } else {
+            alert("Invalid username and password....!!");
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form>
+        <label for="n1">Number 1:</label>
+        <input type="text" id="n1" placeholder="Enter the first value"><br>
+        <label for="n2">Number 2:</label>
+        <input type="text" id="n2" placeholder="Enter the second value"><br><br>
+        <input type="button" value="Addition" onclick="add()">
+        <input type="button" value="Subtraction" onclick="sub()">
+        <input type="button" value="Multiplication" onclick="mul()">
+        <input type="button" value="Division" onclick="div()">
+    </form>
+</body>
+</html>
+
+<script>
+    function add(){
+    var num1=document.getElementById('n1').value
+    var num2=document.getElementById('n2').value
+ 
+     var sum=Number(num1)+Number(num2)
+    alert(sum)
+ }
+ function sub() {
+    var num1 = document.getElementById('n1').value;
+    var num2 = document.getElementById('n2').value;
+
+    var subx = Number(num1) - Number(num2);
+
+    document.write("Result: " + subx);
+}
+
+
+</script>
